@@ -1,7 +1,7 @@
 const AutoWorker = require("../models/autoWorkerModel")
 const APIFeatures = require('./../utils/apiTools')
 
-//getAllAutoService////////////////////////////////////////
+//getAllAutoWorkers////////////////////////////////////////
 exports.getAllAutoWorkers= async (req, res)=>{
     try{
         const autoWorkersData = new APIFeatures(AutoWorker.find(), req.query)
@@ -22,7 +22,7 @@ exports.getAllAutoWorkers= async (req, res)=>{
         })
     }
 }
-//createAutoService////////////////////////////////////////
+//createAutoWorkers////////////////////////////////////////
 exports.createAutoWorker= async (req, res) =>{
     try{
         const newAutoWorker = await AutoWorker.create(req.body)
